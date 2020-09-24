@@ -1,0 +1,56 @@
+//<МИКСИНЫ>
+@mixin anim($time) {-webkit-transition: all $time ease 0; -moz-transition: all $time ease 0;-ms-transition: all $time ease 0;-o-transition: all $time ease 0;transition: all $time ease 0;}
+@mixin anim_cubic($time, $delay) {-webkit-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay; -moz-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;-ms-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;-o-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;}
+@mixin rotate($deg) {-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
+@mixin scale($num) {-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
+@mixin skew($num) {-moz-transform: skew($num);-ms-transform: skew($num);-webkit-transform: skew($num);-o-transform: skew($num);transform: skew($num);}
+@mixin cnt() {display: flex;flex-direction: column;text-align: center;align-items: stretch;justify-content: center;}
+@mixin tr($x,$y,$z) {transform: translate3d($x, $y, $z);};
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+@mixin flexorder($val) {-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+@mixin font($size, $color, $family) {font-size: $size; color: $color; font-family: $family;}
+//</МИКСИНЫ>
+
+//<ШРИФТЫ>
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/montserrat_bold.eot');
+	src: local('☺'), url('../fonts/montserrat_bold.woff') format('woff'), url('../fonts/montserrat_bold.ttf') format('truetype'), url('../fonts/montserrat_bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat.eot');
+	src: local('☺'), url('../fonts/Montserrat.woff') format('woff'), url('../fonts/Montserrat.ttf') format('truetype'), url('../fonts/Montserrat.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@400;700&display=swap');
+//</ШРИФТЫ>
+
+//<ПЕРМЕННЫЕ>
+$fontf1: 'Montserrat', sans-serif;
+$fontf2: 'Lora', serif;
+$contwidth: 1190px;
+//</ПЕРМЕННЫЕ>
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+@import "nullstyle.scss";
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+
+.container {
+    margin: 0 auto;
+    max-width: $contwidth;
+}
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+@import "header.scss";
+@import "services.scss";
+@import "video.scss";
+@import "works.scss";
+@import "about.scss";
+@import "skills.scss";
+@import "contact.scss";
+@import "footer.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>

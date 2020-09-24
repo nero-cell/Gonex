@@ -1,0 +1,58 @@
+.skills {
+    padding: 115px 10px;
+}
+
+.skills__skills {
+    max-width: 750px;
+    width: 100%;
+}
+
+.skill {
+    margin-top: 60px;
+}
+
+.skill__name {
+    font-size: 16px;
+    font-family: $fontf1;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 7px;
+    overflow: visible;
+    background: rgb(245, 140, 140);
+}
+
+.progress-bar {
+    position: relative;
+    overflow: visible;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: linear-gradient(90deg, #00dd00 0%, #ee0000 100%);
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        height: 15px;
+        background: #000;
+    }
+}
+
+.skill__percent {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    font-size: 20px;
+    font-family: $fontf1;
+    color: #000000;
+}
+
+@media(max-width: 300px) {
+    .skills__title {
+        font-size: 28px;
+    }
+}
