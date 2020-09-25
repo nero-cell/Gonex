@@ -767,11 +767,7 @@ button:hover .fa-search {
   min-width: 48px;
 }
 
-.contact__item {
-  line-height: 25px;
-}
-
-.contact__data {
+.contact__item .contact__data {
   line-height: 25px;
   text-align: left;
 }
